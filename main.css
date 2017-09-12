@@ -72,9 +72,8 @@
 
 * {
     transition: background-color 500ms ease-in-out;
-    transition: color 500ms ease-in-out;    
+    transition: color 50ms ease-in-out;    
 }
-
 
 .next button {
     font-size: 1.2em;
