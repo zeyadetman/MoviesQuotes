@@ -1,0 +1,87 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.quotebox {
+    width: 50%;
+    margin: 10% auto;
+    background-color: white !important;
+    border-radius: 5px;
+}
+
+.next {
+    border: none;
+    height: 30px !important;
+    color: white !important;
+    margin: 10px !important;
+    padding: 5px 0.9% 2px 0.9%;
+    text-align: center;
+    vertical-align: middle !important;
+    line-height: 160%;
+    font-size: 0.90em;
+    border-radius: 3px;
+}
+
+.inner {
+    padding: 30px;
+}
+
+.quoter {
+    display: flex;
+    flex-direction: column;
+}
+
+.fa-quote-left {
+    margin: 0 0%;
+}
+
+.fa-quote-right {
+    margin: 0 96%;
+}
+
+.footersign {
+    display: flex;
+    flex-direction: row;
+    margin: 1% 0;
+}
+
+.next:hover {
+    cursor: pointer;
+}
+
+.author {
+    margin: 0 0;
+}
+
+.btns {
+    margin: 5% 0 10% 0;
+    width: 100%;
+}
+
+.fa-film {
+    margin-right: 5px;
+}
+
+.quotetext {
+    margin: 0 10%;
+}
+
+.twitter-share {
+    text-align: center !important;
+}
+
+* {
+    transition: all 500ms ease-in-out;
+}
+
+.next button {
+    font-size: 1.2em;
+}
+
+.footer,
+.footer * {
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Reenie Beanie', cursive;
+    text-decoration: none;
+}
