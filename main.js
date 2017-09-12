@@ -10,10 +10,10 @@ function change() {
 
     xhr.addEventListener("readystatechange", function() {
         if (this.readyState === 4) {
-            console.log(JSON.parse(this.responseText));
+            //console.log(JSON.parse(this.responseText));
             var res = JSON.parse(this.responseText);
             var index = Math.floor(0 + (Math.random() * ((res.length - 0) + 1)));
-            console.log(index);
+            //console.log(index);
             $(".author").html(res[index]['author']);
             $(".quotetext").html(res[index]['quote']);
             $("body").css('background', colors[index % colors.length]);
