@@ -10,19 +10,17 @@ function change() {
 
     xhr.addEventListener("readystatechange", function() {
         if (this.readyState === 4) {
-            //console.log(JSON.parse(this.responseText));
+            console.log(JSON.parse(this.responseText));
             var res = JSON.parse(this.responseText);
-            var index = Math.floor(0 + (Math.random() * ((res.length - 0) + 1)));
-            //console.log(index);
-            $(".author").html(res[index]['author']);
-            $(".quotetext").html(res[index]['quote']);
-            $("body").css('background', colors[index % colors.length]);
-            $(".inner").css('color', colors[index % colors.length]);
-            $(".next").css('background-color', colors[index % colors.length]);
-            $('.twitter-share').attr('href', `https://twitter.com/intent/tweet?text=${encodeURIComponent(res[index]['quote'] +', '+res[index]['author'])}&hashtags=Quote&via=zeyadetman`);
+            $(".author").html(res['author']);
+            $(".quotetext").html(res['quote']);
+            $("body").css('background', colors[Math.floor(0 + (Math.random() * ((colors.length - 0) + 1)))]);
+            $(".inner").css('color', colors[Math.floor(0 + (Math.random() * ((colors.length - 0) + 1)))]);
+            $(".next").css('background-color', colors[Math.floor(0 + (Math.random() * ((colors.length - 0) + 1)))]);
+            $('.twitter-share').attr('href', `https://twitter.com/intent/tweet?text=${encodeURIComponent(res['quote'] +', '+res['author'])}&hashtags=Quote&via=zeyadetman`);
             $('.twitter-share').on('click', function() {
                 if (!inIframe()) {
-                    openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+                    openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + res['quote'] + '" ' + res['author']));
                 }
             });
             twttr.widgets.load();
